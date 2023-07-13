@@ -1,0 +1,42 @@
+.{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+body{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.header, .cabecera, .navbar, .seccion1, .seccion2, .seccion3, .seccion4, .pie, .servicio1, .servicio2, .servicio3 {
+    padding: 10px;
+    border: 2px solid;
+}
+
+.grid {
+    display: grid;   
+    row-gap: 10px; 
+    grid-template-columns: (100%),
+    grid-template-rows: repeat(8)30px,
+ grid-template-areas: "header"
+;    
+}
+    .header {
+        grid-area: "header"
+    }
+    
+ 
+     /* media queries */
+     @media (max-width:480px){
+             
+            }
+@media screen and (min-width:360px) {
+    .header {
+        background-color: #00DFA2
+    }
+}
