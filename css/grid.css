@@ -1,42 +1,89 @@
-.{
-    margin: 0%;
-    padding: 0%;
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     overflow: auto;
 }
 
-body{
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
+body {
+    height: 100vh;
+      width: 100%;
+     flex-direction: column;
+     justify-content: center;
     align-items: center;
 }
-.header, .cabecera, .navbar, .seccion1, .seccion2, .seccion3, .seccion4, .pie, .servicio1, .servicio2, .servicio3 {
+
+.cabecera,.seccion1,.seccion2, .productosypromos, .productos1, .productos2, .productos3, .productos4, .seccioncliente, .novedades , .seccion7,.pie {
     padding: 10px;
-    border: 2px solid;
+    border: 1px solid;
 }
 
 .grid {
-    display: grid;   
-    row-gap: 10px; 
-    grid-template-columns: (100%),
-    grid-template-rows: repeat(8)30px,
- grid-template-areas: "header"
-;    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: 50px, 400px, 1px, 150px, 50px, 20px, 10px
+     row-gap: 10px;
+     column-gap: 5px;
+     grid-template-areas:
+    "cabecera cabecera cabecera cabecera"
+    "seccion1 seccion1 seccion1 seccion1"
+    "seccion2 seccion2 seccion2 seccion2"
+    "productosypromos productosypromos productosypromos productosypromos"
+    "productos1 productos2 productos3 productos4"
+    "seccioncliente seccioncliente novedades novedades"
+     "seccion7 seccion7 seccion7 seccion7"
+    "pie pie pie pie";
 }
-    .header {
-        grid-area: "header"
-    }
+
+.cabecera {
+    grid-area: cabecera;
+          }
+
+.seccion1 {
+    grid-area: seccion1;
     
+  }
+
+.seccion2 {
+    grid-area: seccion2;
+  }
+.productosypromos
+{
+    grid-area: productosypromos;
+  
+      }
+  
+.seccioncliente {
+    grid-area: seccioncliente;
+         }
+  .novedades {
+            grid-area: novedades;
+                 }
+        
+.seccion7 {
+    grid-area: seccion7;
+}
+
+.pie {
+    grid-area: pie;
+}
+
+/* media queries */
+
+@media screen and (max-width:360px) {
  
-     /* media queries */
-     @media (max-width:480px){
-             
-            }
-@media screen and (min-width:360px) {
-    .header {
-        background-color: #00DFA2
+    .grid {
+        grid-template-rows: 140px auto repeat(4, auto) 70px;
+        grid-template-areas:
+        grid-template-areas:
+        "cabecera cabecera cabecera cabecera"
+        "seccion1 seccion1 seccion1 seccion1"
+        "seccion2 seccion2 seccion2 seccion2"
+        "productosypromociones productosypromociones productosypromociones productosypromociones"
+        "productos1 productos2 productos3 productos4"
+        "seccioncliente seccioncliente novedades novedades"
+         "seccion7 seccion7 seccion7 seccion7"
+        "pie pie pie pie";
     }
 }
